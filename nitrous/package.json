@@ -1,0 +1,54 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "nitrous",
+  "title": "NITROUS",
+  "description": "Perform OSINT queries blazingly fast via the nitrous-oxi.de API",
+  "icon": "extension-icon.png",
+  "author": "dvhsh",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "search-modules",
+      "title": "Search Modules",
+      "subtitle": "NITROUS",
+      "description": "Index all OSINT modules available from osint.nitrous-oxi.de",
+      "mode": "view"
+    },
+    {
+      "name": "query-module",
+      "title": "Query Module",
+      "subtitle": "NITROUS",
+      "description": "Query a specific OSINT module",
+      "mode": "view"
+    },
+    {
+      "name": "query-category",
+      "title": "Query Category",
+      "subtitle": "NITROUS",
+      "description": "Query all OSINT modules within a specific category",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.82.2",
+    "@raycast/utils": "^1.16.3",
+    "lodash": "^4.17.21",
+    "nitrous.ts": "^1.0.3"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.8",
+    "@types/lodash": "^4.17.7",
+    "@types/node": "20.8.10",
+    "@types/react": "18.2.25",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "ray build --skip-types -e dist -o dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
